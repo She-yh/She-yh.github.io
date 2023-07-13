@@ -8,6 +8,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:She-yh/sheyh.github.io.git master:gh-pages
+git push -f origin main:gh-pages
 
-cd -
+cd -f

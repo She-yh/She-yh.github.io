@@ -2,6 +2,6 @@ set -e
 
 git add .
 
-git commit -m "update master branch"
+git commit -m "update main branch"
 
 git push -f origin main
