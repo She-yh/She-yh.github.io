@@ -4,4 +4,4 @@ git add .
 
 git commit -m "update master branch"
 
-git push -f origin master
+git push -f origin main
