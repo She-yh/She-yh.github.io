@@ -7,7 +7,7 @@
             </div>
         </div>
     </div>
-    <Menu></Menu>
+    <Menu v-if="false"></Menu>
 </template>
 <script setup>
 import Menu from '@/components/Menu.vue';
@@ -26,7 +26,6 @@ import Menu from '@/components/Menu.vue';
         right: 0;
         bottom: 0;
         z-index: 2;
-        box-shadow: 0 0 50px 10px rgba(56, 55, 55, 0.5) inset;
         background-repeat: no-repeat;
         transform: scale(1.06);
 
@@ -34,7 +33,7 @@ import Menu from '@/components/Menu.vue';
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(56, 55, 55, 0.5);
+            background-color: rgba(56, 55, 55, 30%);
         }
     }
 

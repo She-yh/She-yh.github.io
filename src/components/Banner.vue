@@ -1,5 +1,5 @@
 <template>
-    <section id="topbar">
+    <section id="topbar" class="solid">
         <nav id="topbar-wrapper">
             <span id="topbar-container">
                 <span id="topbar-logo"></span>
@@ -10,8 +10,9 @@
                 <div id="topbar-right">
                     <i id="toggle-button" class="fa fa-bars" aria-hidden="true"></i>
                     <ul id="right-link">
-                        <router-link class="topbar-link" v-for="item in menuItem" :key="item.index" :to="item.index">{{
-                            item.title }}</router-link>
+                        <router-link class="topbar-link" v-for="item in menuItem" :key="item.index" :to="item.index">
+                            <div>{{ item.title }}</div>
+                        </router-link>
                     </ul>
                 </div>
             </span>
@@ -33,26 +34,21 @@ onMounted(() => {
 }
 
 #topbar {
+    color: white;
     width: 100%;
     position: absolute;
     z-index: 1000;
 
     &-wrapper {
-        margin: 8px;
         height: 65px;
     }
 
     &-container {
 
-        box-shadow: 0 0 18px 5px rgba(83, 83, 83, 0.2);
-        background-color: rgba(214, 237, 255, 0.2);
-        backdrop-filter: saturate(180%) blur(20px);
-        border-radius: 10px;
-        margin: 8px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 15px 0 15px;
+        padding: 0 32px 0 32px;
         margin: auto;
         height: 100%;
     }
@@ -67,11 +63,12 @@ onMounted(() => {
     .topbar-link {
         margin-right: 40px;
         font-size: 15px;
+        color: white
     }
 
     .topbar-link:hover,
     .topbar-link:active {
-        color: #23527c;
+        color: #55b0ff;
     }
 
     &-logo {
@@ -85,15 +82,29 @@ onMounted(() => {
     }
 }
 
+.solid {
+    background-color: white;
+    color: rgb(20, 20, 20) !important;
+
+    .topbar-link {
+        color: rgb(20, 20, 20) !important;
+    }
+
+    .topbar-link:hover,
+    .topbar-link:active {
+        color: #55b0ff;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     #topbar-container {
-        padding: 0 45px 0 45px;
+        padding: 0 96px 0 96px;
     }
 }
 
 @media screen and (min-width: 768px) {
     #topbar-container {
-        padding: 0 45px 0 45px;
+        padding: 0 96px 0 96px;
     }
 }
 </style>
