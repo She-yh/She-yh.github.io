@@ -1,30 +1,53 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+  <Banner v-if="true"></Banner>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  <el-container class="home-container">
+    <el-main class="home-main">
+      <router-view></router-view>
+    </el-main>
+    <el-footer>© Sheyh. All Rights Reserved</el-footer>
+  </el-container>
+</template>
+<script setup>
+import { Fragment, watch, reactive, onMounted, onUnmounted } from "vue"
+import Banner from "./components/Banner.vue";
+const screen = reactive({
+  width: window.innerWidth,
+  mode: "computer"
+})
+const onResize = () => {
+  screen.width = window.innerWidth
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+onMounted(() => {
+  window.addEventListener('resize', onResize);
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize)
+})
+watch(screen, () => {
+  if (screen.width < 768) {
+    screen.mode = "phone"
+  } else {
+    screen.mode = "computer"
+  }
+})
+
+</script>
+<style lang="less" scoped>
+.home {
+  &-container {
+    height: 100vh;
+  }
+
+  &-header {
+    position: absolute;
+    width: 100%;
+  }
+
+  &-header-transparent {}
+
+  &-main {
+    flex: 1;
+  }
 }
 </style>

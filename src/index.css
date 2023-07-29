@@ -1,0 +1,11 @@
+body{
+    margin:0;
+    font-family: "Microsoft YaHei Light","Microsoft Yahei", PingFangSC-Regular, sans-serif, 等线 !important;
+    color: rgb(20,20,20);
+    cursor: default;
+}
+a{
+    text-decoration-line: none;
+    color: rgb(20,20,20);
+    cursor: pointer;
+}
