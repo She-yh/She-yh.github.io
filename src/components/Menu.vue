@@ -10,7 +10,7 @@
     </div>
 </template>
 <script setup>
-import { menuList } from '@/constant/menu.js'
+import { menuList } from '@/constant/constant.js'
 const menuItem = menuList
 </script>
 <style lang="less" scoped>

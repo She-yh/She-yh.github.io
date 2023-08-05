@@ -19,5 +19,12 @@ export default defineConfig({
     alias:{
       '@': path.resolve(__dirname, './src'),
     }
+  },
+  server:{
+    proxy:[{
+      context: ['/End-to-End-Multimodal-Recognition', '/music', '/crawler', '/julia','stm32'],
+      target: 'https://she-yh.github.io/',
+      changeOrigin:true,
+    }]
   }
 })
