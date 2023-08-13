@@ -21,6 +21,12 @@ defineProps({
     transition: .25s;
 }
 
+.tab-hover {
+    background-color: #cbcbcb;
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 .tab:hover {
     background-color: #cbcbcb;
     color: black;

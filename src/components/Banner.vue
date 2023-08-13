@@ -15,12 +15,10 @@
 <script setup>
 import { onMounted } from "vue"
 import { menuList } from '@/constant/constant.js'
-import { useRouter } from "vue-router";
-
+import { useRouter } from 'vue-router'
 const menuItem = menuList
 const router = useRouter()
 onMounted(() => {
-    console.log(router)
 })
 const handleSelect = (index) => {
     if (index[0] != '/') window.location.href = index;
@@ -36,7 +34,6 @@ const handleSelect = (index) => {
     border: none;
     color: white;
     width: 100%;
-    position: fixed;
     top: 0;
     z-index: 1000;
     height: 70px;
@@ -46,10 +43,12 @@ const handleSelect = (index) => {
         align-items: center;
         font-size: 24px;
         font-style: italic;
+        padding-left: 16px;
         font-family: "Microsoft Yahei";
     }
 
-    transition: all 0.5s;
+    transition: box-shadow 0.3s;
+
 }
 
 .el-menu {
@@ -113,6 +112,8 @@ const handleSelect = (index) => {
     .el-menu-item {
         color: rgb(20, 20, 20) !important;
     }
+
+    transition:all 0.3s;
 
 }
 

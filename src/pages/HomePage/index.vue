@@ -10,10 +10,8 @@
             </div>
         </div>
     </div>
-    <Menu v-if="false"></Menu>
 </template>
 <script setup>
-import Menu from '@/components/Menu.vue';
 </script>
 <style lang="less" scoped>
 .home {

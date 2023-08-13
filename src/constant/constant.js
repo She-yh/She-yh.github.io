@@ -21,7 +21,7 @@ export const menuList = [{
 ];
 
 export let aboutMe = `
-<h1>关于</h1>
+<h1>关于我</h1>
 
 我很早就开始对计算机感兴趣，最开始接触编程是在初中，学会了用C语言写hello world，那时候就已经觉得自己好酷。而真正开始系统学习是在高中，课余时间学学C语言，做做算法题，高二参加了NOIP拿了省二。
 
@@ -37,13 +37,14 @@ export let aboutMe = `
 通过学习，大三去了**快手总部**实习，感谢各位同事的照顾，直到现在仍然会怀念在北京的日子。我遇到了很多优秀的人，让我收获很多。也让我意识到，我还有很多要去学，还有很多要去看。
 
 我想趁着年轻就稍微走得远一点吧，于是决定留学。所幸中学就读一外语学校，在北京第一次雅思考试就拿到了理想的分数，实习结束就申请了院校。最后接受了**香港理工大学**的offer，至此我的大学也来到了结尾。
+
 <span class = 'dot'>”</span>
 `
 
 export const tabConst = {
     "联系我":['微信:s965598930','邮箱:965598930@qq.com'],
 
-    "标签":[
+    "关于我":[
         '喜欢编程','NOIP','C语言','stm32很好玩','终身学习JavaScript',
     'Pytorch','Vue重度使用','React学习中','TS学习中','音乐','周杰伦','林俊杰',
     '很多年前还会弹吉他','偶尔玩玩LOL','健身','篮球','你怎么知道我一米八五','坚持长跑',
@@ -71,7 +72,7 @@ export const works = [
         * 基于深度学习的音频情感识别。
         * 音频+视频的多模态情感识别，用Pytorch框架完成了多模态情感识别模型的训练，最后在RAVDESS数据集上进行测试并上线。
         `,
-        link:`/End-to-End-Multimodal-Recognition`
+        link:`/gitapi/End-to-End-Multimodal-Recognition`
     },{
         title:'声音可视化',
         intro:`* 使用FFT把音乐从时域转到频域
@@ -79,20 +80,20 @@ export const works = [
         * 可以使用滤波器来调整各频段的声音大小
         * 还可以切换左右声道、上传自己的音乐等
         `,
-        link:`/music`
+        link:`/gitapi/music`
     },{
         title:'豆瓣TOP250',
         intro:`用python爬取豆瓣评分前250的项目并储存到数据库（因为没钱维护就转成json文件保存了），然后用echarts展示出来。这也是我第一次接触到前端。
         `,
-        link:`/crawler`
+        link:`/gitapi/crawler`
     },{
         title:'Julia分形',
         intro:`使用Julia分形算法，去无限地生成图形。第一次见是在stm32的教程上，觉得太漂亮了就搬到了网页上，因为算法是别人的，所以并不具有工作量，不过还是好看的。
         `,
-        link:`/julia`
+        link:`/gitapi/julia`
     },{
         title:'stm32的3D模型',
         intro:`这是实验室的stm32核心板,也只找到这一个工程了。我把他从Altium Designer里面导出来放到前端了，用了threeJS加载3D模型，以此纪念我在实验室的那些时光`,
-        link:`/stm32`
+        link:`/gitapi/stm32`
     },
 ]

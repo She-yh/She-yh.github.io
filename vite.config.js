@@ -21,10 +21,11 @@ export default defineConfig({
     }
   },
   server:{
-    proxy:[{
-      context: ['/End-to-End-Multimodal-Recognition', '/music', '/crawler', '/julia','stm32'],
-      target: 'https://she-yh.github.io/',
-      changeOrigin:true,
-    }]
+    proxy:{
+      '/gitapi':{
+        target: 'https://sheyh.cn/',
+        changeOrigin:true,
+        rewrite: (path) => path.replace(/^\/gitapi/, ''),
+      }}
   }
 })
