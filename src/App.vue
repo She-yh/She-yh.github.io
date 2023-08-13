@@ -26,7 +26,6 @@ window.onload = () => {
 </script>
 <style lang="less" scoped>
 .home {
-  &-container {}
 
   &-header {
     position: absolute;
