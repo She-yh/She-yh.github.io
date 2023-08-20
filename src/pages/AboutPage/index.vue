@@ -1,5 +1,6 @@
 <template>
     <div class="about">
+
         <div style="white-space: pre-wrap;" class="aboutMe" v-html="intro">
         </div>
         <div class="introCard-container">
@@ -68,6 +69,7 @@ onUnmounted(() => {
 <style lang="less" scoped>
 .about {
     display: flex;
+    flex-direction: column;
 
     .aboutMe {
         width: 50%;

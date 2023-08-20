@@ -18,7 +18,7 @@ defineProps({
     border-radius: 5px;
     background-color: rgba(0, 0, 0, .05);
     color: rgba(0, 0, 0, 0.8);
-    transition: .25s;
+    transition: .2s;
 }
 
 .tab-hover {

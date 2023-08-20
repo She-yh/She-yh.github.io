@@ -18,17 +18,16 @@
     height: 100%;
 
     &-background {
-        background-image: url("../../../public/background.jpg");
+        background-image: url("/background.jpg");
         width: 100%;
         background-size: cover;
         height: 100%;
         position: fixed;
-        background-position: right 85%;
+        background-position: center bottom;
         right: 0;
         bottom: 0;
         z-index: 2;
         background-repeat: no-repeat;
-        transform: scale(1.06);
 
         &-filter {
             position: absolute;

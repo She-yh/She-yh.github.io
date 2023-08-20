@@ -2,7 +2,7 @@
     <el-menu :default-active="$route.path" class='topbar' :class="{ solid: $route.path !== '/home' }" mode="horizontal"
         :ellipsis="false" @select="handleSelect">
         <div class="topbar-logo" style="height:70px">
-            佘远航的博客
+            佘远航的主页
         </div>
         <div style="flex:1" @click="console.log(this)" />
         <el-menu-item v-for="item in menuItem" :index="item.index" :key="item.index">
@@ -117,10 +117,19 @@ const handleSelect = (index) => {
 
 }
 
+@media screen and (max-width: 768px) {
+    .topbar-logo {
+        display: none;
+    }
+
+}
+
 @media screen and (min-width: 768px) {
     .topbar {
         padding: 0 48px 0 48px;
     }
+
+
 }
 
 @media screen and (min-width: 1200px) {
